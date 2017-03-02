@@ -1,0 +1,78 @@
+table.paginate tbody tr {
+    display: none;
+}
+.page_nav {
+    text-align: center;
+}
+.page_nav span {
+    background: #EEE;
+    padding: 0.25em;
+    margin: 0.125em;
+    min-width: 2em;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2em;
+    cursor: pointer;
+}
+.page_nav span.disabled {
+    display: inline-block;
+    opacity: 0.5;
+    cursor: default;
+}
+.page_nav span:not(.active):hover {
+    background: #E4e4e4;
+}
+.page_nav .pg.active {
+    background: #888;
+    color: #FFF;
+    font-weight: bold;
+    cursor: default;
+}
+.page_nav .pg {display: none; }
+.page_nav .pg.active,
+.page_nav .pg.near {
+    display: inline-block;
+}
+.page_nav .first_pg:before,
+.page_nav .first_pg:after,
+.page_nav .prev_pg:before,
+.page_nav .last_pg:before,
+.page_nav .last_pg:after,
+.page_nav .next_pg:before {
+    content: '';
+    display: inline-block;
+    font-size: 0.65em;
+    width: 1em;
+    height: 1em;
+    border-right: 3px solid #888;
+    border-top: 3px solid #888;
+    vertical-align: 0.125em;
+}
+.page_nav .last_pg:before,
+.page_nav .last_pg:after,
+.page_nav .next_pg:before {
+    margin-left: -0.4em;
+    transform: rotate(45deg);
+}
+.page_nav .first_pg:before,
+.page_nav .first_pg:after,
+.page_nav .prev_pg:before {
+    transform: rotate(-135deg);
+    margin-right: -0.4em;
+}
+
+/* Custom for Zenner */
+.page_nav .pg.active {
+    background: #47c2c6;
+}
+.page_nav .first_pg:before,
+.page_nav .first_pg:after,
+.page_nav .prev_pg:before,
+.page_nav .last_pg:before,
+.page_nav .last_pg:after,
+.page_nav .next_pg:before {
+    border-right-color: #47c2c6;
+    border-top-color: #47c2c6;
+}
+.paginate_filter_input {max-width: 100%; }
+.paginate.filtered {width: 100%; }
